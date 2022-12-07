@@ -60,6 +60,6 @@ Note: I could not be able to crash prog_8, I always get "Reading too much!" outp
 -   Python 3.8.10
 -   text editor: VS code
 
-Screenshots:
+# Screenshots:
 (see the fuzzer folder PDF for screenshots)
 
