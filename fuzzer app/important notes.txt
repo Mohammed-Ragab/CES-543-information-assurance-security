@@ -1,0 +1,8 @@
+- 13% probability change is not used in the project, also the seed file in the first prog_0 to prog_2 are not used.
+
+- the goals of this assignment is to crash the programs from prog_0 to prog_9 by providing a random string which is generated 
+by devloping a fuzzer program which generates a random string.
+
+- the seed value given in the commandline is used to set for any random function(such as arandom function that generates a string or a number) so that the output of the random function is the same each time you run the fuzzer with the same seed value.
+- number of iterations command line argumnet is used for iterating on a list of characters to generate a random string.
+- there is a python random function that randomly chooses a character from a list of characters/string, this function is "random.choice(letters)", make sure to set the seed in python with the seed value in the command line before calling any random function(such as random.choice(letter) ), so that each time the random function chooses the same character from a string , this resulting in generating the same random string each time you run your fuzzer program givne the same seed_value and number_of_iterations
