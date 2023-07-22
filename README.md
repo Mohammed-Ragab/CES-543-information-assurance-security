@@ -16,6 +16,8 @@ I developed a fuzzer software that generates random string with different length
 My fuzzer program takes two inputs from the command line , the first one is a seed value which is used to be given to any random value generator so that each time the random value generator generates the same output, the second input is the number of iterations which represents the length of the generates random string.  
   
 in python programming language, if you set a seed value in the “random” module( by calling *random.seed(seed_value)* ) before calling any random function in “random” module such as “ *random.choice(letters)”*, the random function will generate the same value each time you run the python script, this is called “deterministic behavior”, I tested this by myself and commented the test code in my python fuzzer source code so that anyone can test it.  
+
+the generated random string can be used as input for other software and exploit "buffer overflow" vulnerability.
   
 # How is the random string generated?  
  in python , there is “string” module which contains a constant named “*printable*”, you can use it by typing “*string.printable*” which contains all printable ASCII characters including upper and lower English letters, digits( 0 - 9), and special characters(\$\#@..etc) and space characters.
